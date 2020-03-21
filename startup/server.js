@@ -5,7 +5,7 @@ function server(app)
 {
     console.log("Developement Environment...");
 
-    let port = 443;
+    let port = 8080;
     let timeout = 500;
     let maxConnections = 10000;
 
