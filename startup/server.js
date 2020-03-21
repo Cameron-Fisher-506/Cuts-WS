@@ -1,4 +1,4 @@
-const http = require("http");
+const https = require("https");
 
 
 function server(app)
@@ -9,12 +9,12 @@ function server(app)
     let timeout = 500;
     let maxConnections = 10000;
 
-    let httpServer = http.createServer(app).listen(port, () =>{
+    let httpsServer = https.createServer(app).listen(port, () =>{
         console.log("Running on port " + port + "....");
     });
 
-    httpServer.setTimeout = timeout;
-    httpServer.maxConnections = maxConnections;
+    httpsServer.setTimeout = timeout;
+    httpsServer.maxConnections = maxConnections;
 }
 
 module.exports.server = server;
