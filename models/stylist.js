@@ -6,16 +6,28 @@ const stylistSchema = new Schema({
     name:{
         type:String
     },
-    lastname:{
-        type:String
-    },
     yearsExperience:{
         type: Number
     },
     mobileNumber:{
-        type: Number
+        type: String
+    },
+    username:{
+        type: String
+    },
+    password:{
+        type:String
+    },
+    passwordSalt:{
+        type:String
+    },
+    rating:{
+        type:Number
     },
     qualifications: [qualificationSchema],
+    idCompany:{
+        type: mongoose.Types.ObjectId
+    },
     createdTime:{
         type: String
     }
