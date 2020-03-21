@@ -9,12 +9,12 @@ function server(app)
     let timeout = 500;
     let maxConnections = 10000;
 
-    let httpsServer = https.createServer(app).listen(port, () =>{
+    let httpServer = http.createServer(app).listen(port, () =>{
         console.log("Running on port " + port + "....");
     });
 
-    httpsServer.setTimeout = timeout;
-    httpsServer.maxConnections = maxConnections;
+    httpServer.setTimeout = timeout;
+    httpServer.maxConnections = maxConnections;
 }
 
 module.exports.server = server;
